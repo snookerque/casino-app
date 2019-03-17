@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+table.center{
+  border-spacing: 100px;
+}
+
+table.center td{
+  margin:20px;
+  padding:30px;
+}
+
+table.center th{
+  margin:20px;
+  padding:30px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#linkBack {
+  margin-top:5%;
+  text-align: center;
+}
+
+#confirmTransaction{
+  font-size: 25px;
+  color: 	#4b4f54;
+  width:100%;
+  margin:auto;
+  word-spacing: 20%;
+}
+
+#notification{
+  color: 	#4b4f54;
+  text-align: center;
+  margin:auto;
+  font-size:35px;
+  margin-bottom:20%;
+}
+
+#rollButton{
+  margin:auto;
+  margin-top:50%;
+  margin-left:26%;
+}
+
+#scoreText, #resultLoading, #gameResult, #gameWaiting, #betText{
+  font-size: 25px;
+  color: 	#4b4f54;
+  width:100%;
+  margin:auto;
+  margin-top:5%;
+  word-spacing: 20%;
+  text-align: center;
+}
+
+.betInput{
+  text-align: center;
+}
+
+.game{
+			position: relative;
+}
+
+.game::before{
+		content: '';
+
+    height: 60%;
+    position: absolute;
+}
+
+/* ============================= dots here ============================ */
+.dot{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: black;
+	-webkit-box-shadow: 0 0 5px 2.5px rgba(0,0,0,0.5);
+	        box-shadow: 0 0 5px 2.5px rgba(0,0,0,0.5);
+}
+
+/* === 1 === */
+.face-one .dot,
+.face-three .dot:nth-child(2),
+.face-five .dot:nth-child(5){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
+/* === 2 === */
+.face-two .dot:nth-child(1),
+.face-three .dot:nth-child(1),
+.face-four .dot:nth-child(1),
+.face-five .dot:nth-child(1),
+.face-six .dot:nth-child(1){
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	-webkit-transform: translate(-20%,-20%);
+	    -ms-transform: translate(-20%,-20%);
+	        transform: translate(-20%,-20%);
+}
+.face-two .dot:nth-child(2),
+.face-three .dot:nth-child(3),
+.face-four .dot:nth-child(4),
+.face-five .dot:nth-child(4),
+.face-six .dot:nth-child(6){
+	position: absolute;
+	top: 80%;
+	left: 80%;
+	-webkit-transform: translate(-80%,-80%);
+	    -ms-transform: translate(-80%,-80%);
+	        transform: translate(-80%,-80%);
+}
+/* === 3 === */
+
+/* === 4 === */
+.face-four .dot:nth-child(2),
+.face-five .dot:nth-child(2),
+.face-six .dot:nth-child(3){
+	position: absolute;
+	top: 20%;
+	left: 80%;
+	-webkit-transform: translate(-80%,-20%);
+	    -ms-transform: translate(-80%,-20%);
+	        transform: translate(-80%,-20%);
+}
+.face-four .dot:nth-child(3),
+.face-five .dot:nth-child(3),
+.face-six .dot:nth-child(4){
+	position: absolute;
+	top: 80%;
+	left: 20%;
+	-webkit-transform: translate(-20%,-80%);
+	    -ms-transform: translate(-20%,-80%);
+	        transform: translate(-20%,-80%);
+}
+/* === 5 === */
+
+/* === 6 === */
+.face-six .dot:nth-child(2){
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-20%);
+	    -ms-transform: translate(-50%,-20%);
+	        transform: translate(-50%,-20%);
+}
+.face-six .dot:nth-child(5){
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-80%);
+	    -ms-transform: translate(-50%,-80%);
+	        transform: translate(-50%,-80%);
+}
+/* ============================= end dots ============================ */
+
+/* ============================= dice here ============================ */
+.dice {
+    display:none;
+		margin-top:25%;
+    margin-bottom:20%;
+    margin-left:auto;
+    margin-right:auto;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-animation: rotation 10s linear infinite;
+            animation: rotation 10s linear infinite;
+}
+@-webkit-keyframes rotation {
+    0% { -webkit-transform: rotateY(0deg) rotateX(-180deg) rotateZ(-140deg); transform: rotateY(0deg) rotateX(-180deg) rotateZ(-140deg); }
+  50% { -webkit-transform: rotateY(360deg) rotateX(-360deg) rotateZ(00deg); transform: rotateY(360deg) rotateX(-360deg) rotateZ(00deg); }
+    100% { -webkit-transform: rotateY(360deg) rotateX(180deg) rotateZ(220deg); transform: rotateY(360deg) rotateX(180deg) rotateZ(220deg); }
+
+}
+@keyframes rotation {
+    0% { -webkit-transform: rotateY(0deg) rotateX(-180deg) rotateZ(-140deg); transform: rotateY(0deg) rotateX(-180deg) rotateZ(-140deg); }
+  50% { -webkit-transform: rotateY(360deg) rotateX(-360deg) rotateZ(00deg); transform: rotateY(360deg) rotateX(-360deg) rotateZ(00deg); }
+    100% { -webkit-transform: rotateY(360deg) rotateX(180deg) rotateZ(220deg); transform: rotateY(360deg) rotateX(180deg) rotateZ(220deg); }
+
+}
+.face {
+    background: white;
+		border: 7px solid rgba(0, 0, 0, 0.8);
+		border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+		-webkit-box-shadow: 0 0 50px 1px white;
+		        box-shadow: 0 0 50px 1px white;
+}
+.face-one{
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+}
+.face-two{
+    -webkit-transform: rotateY(180deg) translateZ(50px);
+            transform: rotateY(180deg) translateZ(50px);
+}
+.face-three{
+    -webkit-transform: rotateY(-90deg) translateZ(50px);
+            transform: rotateY(-90deg) translateZ(50px);
+}
+.face-four{
+    -webkit-transform: rotateY(90deg) translateZ(50px);
+            transform: rotateY(90deg) translateZ(50px);
+}
+.face-five{
+    -webkit-transform: rotateX(90deg) translateZ(50px);
+            transform: rotateX(90deg) translateZ(50px);
+}
+.face-six{
+    -webkit-transform: rotateX(-90deg) translateZ(50px);
+            transform: rotateX(-90deg) translateZ(50px);
+}
